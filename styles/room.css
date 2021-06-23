@@ -107,8 +107,70 @@ O line-height fez o ajuste da 'altura' do botão */
   line-height: 2.4rem;
 }
 
-.question-content {
+/* Estilização do container que envolve toda pergunta em si (apenas uma pergunta) */
+.question-wrapper {
+  border-radius: 0 0.8rem 0.8rem 0.8rem;
+  background: var(--light-blue);
+  margin-bottom: 0.8rem;
+  padding: 2.4rem;
+}
+
+.question-wrapper .question-content {
+  align-items: center;
+  display: flex;
+}
+
+.question-wrapper .question-content p {
+  word-break: break-word;
+  align-items: center;
+  display: flex;
+  min-height: 5.5rem;
+}
+
+.question-wrapper .question-content .user {
+  clip-path: circle();
+  background-color: var(--blue);
+  padding: 1.4rem;
+  width: 5.2rem;
+  height: 5.2rem;
+  margin-right: 1.6rem;
+}
+
+/* Estilizando o background da cor da caixa que foi marcado como Lido */
+.question-wrapper.read {
+  background-color: var(--grey-read);
+}
+
+/* Estilizando a cor do fundo do avatar que foi marcado como Lido */
+.question-wrapper.read .user {
+  background-color: var(--grey-blue);
+}
+
+.question-wrapper .actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.question-wrapper .actions > a {
+  color: var(--grey-dark);
   display: flex;
   align-items: center;
-  justify-content: center;
+}
+
+/* Espaçamento entre a imagem de deletar e lido e o texto ao lado */
+.question-wrapper .actions > a > img {
+  margin-right: 0.8rem;
+}
+
+.actions .check {
+  margin-right: 2.4rem;
+}
+
+.actions .delete {
+  margin-right: 0.8rem;
+}
+
+.question-wrapper .question > p {
+  color: var(--black);
 }

@@ -18,6 +18,9 @@
 
     <!-- CSS próprio para cada página com suas particularidades -->
     <link rel="stylesheet" href="./styles/room.css" />
+
+    <!-- CSS próprio para a página da Modal -->
+    <link rel="stylesheet" href="./styles/modal.css" />
   </head>
 
   <body>
@@ -76,14 +79,17 @@
 
           <div class="questions">
             <div class="question-wrapper">
+              <!-- Classe .question-content apenas com o Avatar e o texto da pergunta -->
               <div class="question-content">
                 <div class="user">
-                  <img src="./assets/avatar.svg" alt="Avatar" />
+                  <img src="./assets/user.svg" alt="Avatar" />
                 </div>
                 <div class="question">
                   <p>Qual a diferença entre JavaScript e TypeScript?</p>
                 </div>
               </div>
+
+              <!-- Classe .actions para os botões de marcar como lido e excluir -->
               <div class="actions">
                 <a href="#" class="check">
                   <img src="./assets/check.svg" alt="Marcar como lida" />
@@ -95,9 +101,103 @@
                 >
               </div>
             </div>
+
+            <div class="question-wrapper">
+              <!-- Classe .question-content apenas com o Avatar e o texto da pergunta -->
+              <div class="question-content">
+                <div class="user">
+                  <img src="./assets/user.svg" alt="Avatar" />
+                </div>
+                <div class="question">
+                  <p>O que é JavaScript?</p>
+                </div>
+              </div>
+
+              <!-- Classe .actions para os botões de marcar como lido e excluir -->
+              <div class="actions">
+                <a href="#" class="check">
+                  <img src="./assets/check.svg" alt="Marcar como lida" />
+                  Marcar como lida</a
+                >
+                <a href="#" class="delete">
+                  <img src="./assets/trash.svg" alt="Excluir" />
+                  Excluir</a
+                >
+              </div>
+            </div>
+
+            <div class="question-wrapper">
+              <!-- Classe .question-content apenas com o Avatar e o texto da pergunta -->
+              <div class="question-content">
+                <div class="user">
+                  <img src="./assets/user.svg" alt="Avatar" />
+                </div>
+                <div class="question">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur
+                    adipisicing elit. Rem facere libero veniam cumque. Odio
+                    totam, harum iste sunt inventore ipsum laboriosam, et,
+                    laborum accusantium quisquam unde repudiandae cumque debitis
+                    vero?
+                  </p>
+                </div>
+              </div>
+
+              <!-- Classe .actions para os botões de marcar como lido e excluir -->
+              <div class="actions">
+                <a href="#" class="check">
+                  <img src="./assets/check.svg" alt="Marcar como lida" />
+                  Marcar como lida</a
+                >
+                <a href="#" class="delete">
+                  <img src="./assets/trash.svg" alt="Excluir" />
+                  Excluir</a
+                >
+              </div>
+            </div>
+
+            <div class="question-wrapper read">
+              <!-- Classe .question-content apenas com o Avatar e o texto da pergunta -->
+              <div class="question-content">
+                <div class="user">
+                  <img src="./assets/user.svg" alt="Avatar" />
+                </div>
+                <div class="question">
+                  <p>Qual a diferença de const, let e var no JS?</p>
+                </div>
+              </div>
+
+              <!-- Classe .actions para os botões de marcar como lido e excluir -->
+              <div class="actions">
+                <a href="#" class="delete"> <!-- Classe .delete tá estilizado com a margem a esquerda -->
+                  <img src="./assets/check.svg" alt="Marcar como lida" />
+                  Pergunta lida</a
+                >
+              </div>
+            </div>            
           </div>
         </section>
       </main>
     </div>
+
+    <!-- CRIAÇÃO DA MODAL -->
+    <div class="modal-wrapper">
+      <div class="modal">
+        <h2>Excluir Pergunta</h2>
+        <p>Tem certeza que você deseja excluir esta pergunta?</p>
+
+        <form action="#">
+          <label for-id="password" class="sr-only">Digite sua senha</label>
+          <input type="password" id="password" name="password" placeholder="Digite sua senha">
+
+          <div class="buttons">
+            <div class="button grey">Cancelar</div>
+            <button class="red">Sim, excluir</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
   </body>
 </html>

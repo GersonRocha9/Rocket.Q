@@ -22,6 +22,7 @@ html {
   --grey-blue: #a1b2cd;
   --grey-medium: #d3d9e2;
   --grey-light: #e5eaf1;
+  --grey-read: #EAECF2;
 
   --hover-blue: #5699ff;
   --hover-red: #ea4b65;
@@ -99,6 +100,16 @@ button.outlined,
   background-color: var(--white);
   color: var(--blue);
   border: 0.2rem solid var(--blue);
+}
+
+button.red, .button.red {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+button.grey, .button.grey {
+  background-color: var(--grey-light);
+  color: var(--grey-dark);
 }
 
 /* Classe .sr-only do Tailwind para ocultar a label, mas mantém no código por questão de acessibilidade */
