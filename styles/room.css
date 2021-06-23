@@ -1,0 +1,114 @@
+.content {
+  max-width: min(
+    112rem,
+    80%
+  ); /*Tamanho máximo do container para criar o espaçamento */
+}
+
+/* Estilização geral do Header */
+#room header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /*Espaçamento que é usado em geral para o header*/
+  align-items: center;
+}
+
+/* Display Flex para os botões ficarem um ao lado do outro */
+#room header .buttons {
+  display: flex;
+}
+
+/* Pegando apenas o primeiro botão e aplicando a estilização de margin a direita e padding igual ao layout do Figma */
+#room header .buttons .button:nth-child(1) {
+  margin-right: 0.8rem;
+  padding: 1.3rem 1.6rem;
+}
+
+/* Pegando apenas a imagem do primeiro botão e aplicando a estilização de margin a esquerda e tamanho dela */
+#room header .buttons .button:nth-child(1) img {
+  margin-left: 1.16rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Pegando apenas o primeiro botão e aplicando a estilização de margin a esquerda e padding igual ao layout do Figma */
+#room header .buttons .button:nth-child(2) {
+  margin-left: 0.8rem;
+  padding: 1.3rem 3.2rem;
+}
+
+/* Pegando apenas a imagem do primeiro botão e aplicando a estilização de margin a direita e tamanho dela */
+#room header .buttons .button:nth-child(2) img {
+  margin-right: 1.16rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Estilização do h2 da página padrão Figma */
+#question-form h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2.8rem;
+  color: var(--black);
+  margin-bottom: 2.4rem;
+  line-height: 4.2rem;
+}
+
+/* Estilização das bordas do formulário em geral */
+#question-form form {
+  border: 0.2rem solid var(--grey-blue);
+  padding: 1.6rem; /* Espaçamento na parte de dentro do formulário */
+  border-radius: 0 0.8rem 0.8rem 0.8rem;
+  margin-bottom: 1.6rem;
+}
+
+/* Estilização do textarea conforme o Figma */
+#question-form form textarea {
+  background: none;
+  resize: none;
+  width: 100%;
+  height: 13.4rem;
+  outline: none; /* Tira a borda ao clicar */
+}
+
+/* Ajustando a cor do Placeholder */
+#question-form form textarea::placeholder {
+  color: var(--grey-blue);
+}
+
+#question-form form footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilização da div que contém o cadeado e o texto de anonimato
+O símbolo > serve para indicar ao CSS que eu quero apenas as divs filhas de footer. Se houvesse outras divs dentro dessa div que está dentro do footer, o CSS não aplicaria o estilo */
+#question-form form footer > div {
+  display: flex; /* Para alinhar o cadeado ao texto do lado */
+  color: var(--icons-details);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+/* Estilização e alinhamento da imagem de cadeado */
+#question-form form footer div img {
+  margin-right: 0.9rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Estilização do botão.
+O line-height fez o ajuste da 'altura' do botão */
+#question-form form footer button {
+  height: auto;
+  padding: 0.8rem 2.4rem;
+  line-height: 2.4rem;
+}
+
+.question-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

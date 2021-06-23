@@ -1,0 +1,120 @@
+* {
+  /* Reset completo na página */
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  /* Variáveis de cores padrão do Figma desenhado pela Designer */
+  --black: #0d114f;
+  --white: #fafafa;
+  --red: #e83f5b;
+  --light-blue: #e0ecff;
+  --blue: #3485ff;
+  --background: #fbfcff;
+  --overlay: #040911;
+  --icons-details: #a5b0c1;
+
+  --grey-dark: #4d5e77;
+  --grey-blue: #a1b2cd;
+  --grey-medium: #d3d9e2;
+  --grey-light: #e5eaf1;
+
+  --hover-blue: #5699ff;
+  --hover-red: #ea4b65;
+  --hover-grey: #8794a7;
+
+  /* Setando o padrão de 10px para a fonte, para facilitar a conta para o padrão REM.
+  28px é o tamanho da fonte do h2 da Designer... se fosse 16px, teríamos que fazer a conta e daria 1.75rem. Entretanto, setamos a font-size padrão para 10, o que torna a conta muito mais fácil, pois é só mover uma vírgula (28px = 2.8rem) --- (50px = 5.0rem) */
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  height: 100vh; /* vh = view height = altura completa da screen size */
+  /* width: 100vw;  vw = view widht = largura completa da screen size */
+
+  /* Setando a cor que foi criada na variável lá em cima */
+  background-color: var(--background);
+}
+
+.content header {
+  width: 80%;
+  margin: 3.5rem auto;
+}
+
+.content header img {
+  width: 16.7rem;
+}
+
+body,
+button,
+textarea,
+input {
+  /* Intervalo de tamanho (menor tela, padrão e tela grande) */
+  font-size: clamp(14px, 1.6rem, 2vw);
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Estilização global de borda e altura dos inputs e botões */
+input,
+button,
+.button {
+  border-radius: 0.8rem;
+  height: 5rem;
+}
+
+/* Estilização global dos botões */
+button,
+.button {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  line-height: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--blue);
+  color: var(--white);
+  cursor: pointer;
+}
+
+/* Estilização do hover dos botões com o filter: brightness (da brilho a cor do background)*/
+button:hover,
+.button:hover {
+  transition: 0.2s;
+  filter: brightness(1.2);
+}
+
+button > img,
+.button > img {
+  margin-right: 1rem;
+  width: 2rem;
+}
+
+button.outlined,
+.button.outlined {
+  background-color: var(--white);
+  color: var(--blue);
+  border: 0.2rem solid var(--blue);
+}
+
+/* Classe .sr-only do Tailwind para ocultar a label, mas mantém no código por questão de acessibilidade */
+.sr-only {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.content {
+  width: 100%;
+  margin: 0 auto;
+}
